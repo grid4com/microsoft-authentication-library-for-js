@@ -15,37 +15,32 @@ import { ClientAuthError } from "../../error/ClientAuthError";
 /**
  * Base type for credentials to be stored in the cache: eg: ACCESS_TOKEN, ID_TOKEN etc
  *
- * Key:Value Schema:
- *
  * Key: <home_account_id*>-<environment>-<credential_type>-<client_id>-<realm*>-<target*>-<requestedClaims*>-<scheme*>
- *
- * Value Schema:
- * {
- *      homeAccountId: home account identifier for the auth scheme,
- *      environment: entity that issued the token, represented as a full host
- *      credentialType: Type of credential as a string, can be one of the following: RefreshToken, AccessToken, IdToken, Password, Cookie, Certificate, Other
- *      clientId: client ID of the application
- *      secret: Actual credential as a string
- *      familyId: Family ID identifier, usually only used for refresh tokens
- *      realm: Full tenant or organizational identifier that the account belongs to
- *      target: Permissions that are included in the token, or for refresh tokens, the resource identifier.
- *      tokenType: Matches the authentication scheme for which the token was issued (i.e. Bearer or pop)
- *      requestedClaimsHash: Matches the SHA 256 hash of the claims object included in the token request
- *      userAssertionHash: Matches the SHA 256 hash of the obo_assertion for the OBO flow
- * }
  */
 export class CredentialEntity {
+    /** home account identifier for the auth scheme */
     homeAccountId: string;
+    /** entity that issued the token, represented as a full host */
     environment: string;
+    /** Type of credential as a string, can be one of the following: RefreshToken, AccessToken, IdToken, Password, Cookie, Certificate, Other */
     credentialType: CredentialType;
+    /** client ID of the application */
     clientId: string;
+    /** Actual credential as a string */
     secret: string;
+    /** Family ID identifier, usually only used for refresh tokens */
     familyId?: string;
+    /** Full tenant or organizational identifier that the account belongs to */
     realm?: string;
+    /** Permissions that are included in the token, or for refresh tokens, the resource identifier. */
     target?: string;
+    /** Matches the SHA 256 hash of the obo_assertion for the OBO flow */
     userAssertionHash?: string;
+    /** Matches the authentication scheme for which the token was issued (i.e. Bearer or pop) */
     tokenType?: AuthenticationScheme;
+    /** used for POP and SSH tokenTypes */
     keyId?: string;
+    /** Matches the SHA 256 hash of the claims object included in the token request */
     requestedClaimsHash?: string;
 
     /**

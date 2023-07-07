@@ -165,7 +165,7 @@ export class OnBehalfOfClient extends BaseClient {
     /**
      * read idtoken from cache, this is a specific implementation for OBO as the requirements differ from a generic lookup in the cacheManager
      * Certain use cases of OBO flow do not expect an idToken in the cache/or from the service
-     * @param atHomeAccountId {string}
+     * @param {string} atHomeAccountId
      */
     private readIdTokenFromCacheForOBO(
         atHomeAccountId: string

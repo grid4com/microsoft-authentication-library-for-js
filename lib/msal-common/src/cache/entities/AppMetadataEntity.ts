@@ -8,20 +8,14 @@ import { APP_METADATA, Separators } from "../../utils/Constants";
 /**
  * APP_METADATA Cache
  *
- * Key:Value Schema:
- *
  * Key: appmetadata-<environment>-<client_id>
- *
- * Value:
- * {
- *      clientId: client ID of the application
- *      environment: entity that issued the token, represented as a full host
- *      familyId: Family ID identifier, '1' represents Microsoft Family
- * }
  */
 export class AppMetadataEntity {
+    /** client ID of the application */
     clientId: string;
+    /** entity that issued the token, represented as a full host */
     environment: string;
+    /** Family ID identifier, '1' represents Microsoft Family */
     familyId?: string;
 
     /**

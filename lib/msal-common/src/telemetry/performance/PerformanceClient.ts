@@ -440,8 +440,8 @@ export abstract class PerformanceClient implements IPerformanceClient {
 
     /**
      * Increment counters to be emitted when the measurements are flushed
-     * @param counters {Counters}
-     * @param correlationId {string} correlation identifier
+     * @param {Counters} counters
+     * @param {string} correlationId correlation identifier
      */
     increment(counters: Counters, correlationId: string): void {
         this.logger.trace("PerformanceClient: Updating counters");

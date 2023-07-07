@@ -52,14 +52,13 @@ export class PublicClientApplication implements IPublicClientApplication {
      * - redirect_uri: the uri of your application registered in the portal.
      *
      * In Azure AD, authority is a URL indicating the Azure active directory that MSAL uses to obtain tokens.
-     * It is of the form https://login.microsoftonline.com/{Enter_the_Tenant_Info_Here}
+     * It is of the form https://login.microsoftonline.com/<Enter_the_Tenant_Info_Here>
      * If your application supports Accounts in one organizational directory, replace "Enter_the_Tenant_Info_Here" value with the Tenant Id or Tenant name (for example, contoso.microsoft.com).
      * If your application supports Accounts in any organizational directory, replace "Enter_the_Tenant_Info_Here" value with organizations.
      * If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace "Enter_the_Tenant_Info_Here" value with common.
      * To restrict support to Personal Microsoft accounts only, replace "Enter_the_Tenant_Info_Here" value with consumers.
      *
-     * In Azure B2C, authority is of the form https://{instance}/tfp/{tenant}/{policyName}/
-     * Full B2C functionality will be available in this library in future versions.
+     * In Azure B2C, authority is of the form https://<instance>/<tenant>/<policyName>
      *
      * @param configuration Object for the MSAL PublicClientApplication instance
      * @param IController Optional parameter to explictly set the controller. (Will be removed when we remove public constructor)
@@ -112,7 +111,7 @@ export class PublicClientApplication implements IPublicClientApplication {
      * Silently acquire an access token for a given set of scopes. Returns currently processing promise if parallel requests are made.
      *
      * @param {@link (SilentRequest:type)}
-     * @returns {Promise.<AuthenticationResult>} - a promise that is fulfilled when this function has completed, or rejected if an error was raised. Returns the {@link AuthResponse} object
+     * @returns {Promise.<AuthenticationResult>} - a promise that is fulfilled when this function has completed, or rejected if an error was raised. Returns the {@link AuthenticationResult} object
      */
     acquireTokenSilent(
         silentRequest: SilentRequest

@@ -374,10 +374,10 @@ const networkRequestViaHttps = <T>(
 
 /**
  * Check if extra parsing is needed on the repsonse from the server
- * @param statusCode {number} the status code of the response from the server
- * @param statusMessage {string | undefined} the status message of the response from the server
- * @param headers {Record<string, string>} the headers of the response from the server
- * @param body {string} the body from the response of the server
+ * @param {number} statusCode the status code of the response from the server
+ * @param {string | undefined} statusMessage the status message of the response from the server
+ * @param {Record<string, string>} headers the headers of the response from the server
+ * @param {string} body the body from the response of the server
  * @returns {Object} JSON parsed body or error object
  */
 const parseBody = (

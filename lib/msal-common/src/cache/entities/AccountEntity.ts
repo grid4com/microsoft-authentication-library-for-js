@@ -23,40 +23,33 @@ import { TokenClaims } from "../../account/TokenClaims";
 /**
  * Type that defines required and optional parameters for an Account field (based on universal cache schema implemented by all MSALs).
  *
- * Key : Value Schema
- *
  * Key: <home_account_id>-<environment>-<realm*>
- *
- * Value Schema:
- * {
- *      homeAccountId: home account identifier for the auth scheme,
- *      environment: entity that issued the token, represented as a full host
- *      realm: Full tenant or organizational identifier that the account belongs to
- *      localAccountId: Original tenant-specific accountID, usually used for legacy cases
- *      username: primary username that represents the user, usually corresponds to preferred_username in the v2 endpt
- *      authorityType: Accounts authority type as a string
- *      name: Full name for the account, including given name and family name,
- *      clientInfo: Full base64 encoded client info received from ESTS
- *      lastModificationTime: last time this entity was modified in the cache
- *      lastModificationApp:
- *      idTokenClaims: Object containing claims parsed from ID token
- *      nativeAccountId: Account identifier on the native device
- * }
  */
 export class AccountEntity {
+    /** home account identifier for the auth scheme */
     homeAccountId: string;
+    /** entity that issued the token, represented as a full host */
     environment: string;
+    /** Full tenant or organizational identifier that the account belongs to */
     realm: string;
+    /** Original tenant-specific accountID, usually used for legacy cases */
     localAccountId: string;
+    /** primary username that represents the user, usually corresponds to preferred_username in the v2 endpt */
     username: string;
+    /** Accounts authority type as a string */
     authorityType: string;
+    /** Full name for the account, including given name and family name */
     name?: string;
+    /** Full base64 encoded client info received from ESTS */
     clientInfo?: string;
+    /** last time this entity was modified in the cache */
     lastModificationTime?: string;
     lastModificationApp?: string;
     cloudGraphHostName?: string;
     msGraphHost?: string;
+    /** Object containing claims parsed from ID token */
     idTokenClaims?: TokenClaims;
+    /** Account identifier on the native device */
     nativeAccountId?: string;
 
     /**
