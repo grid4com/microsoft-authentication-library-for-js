@@ -2,6 +2,35 @@
   "name": "@azure/msal-browser",
   "entries": [
     {
+      "date": "Mon, 24 Jul 2023 20:44:45 GMT",
+      "tag": "@azure/msal-browser_v3.0.0-beta.2",
+      "version": "3.0.0-beta.2",
+      "comments": {
+        "prerelease": [
+          {
+            "author": "shylasummers@users.noreply.github.com",
+            "package": "@azure/msal-browser",
+            "commit": "c8e0f54ad7c6280ec6336759bbf04b5c64c121cd",
+            "comment": "Added OIDCOptions parameter to config"
+          },
+          {
+            "author": "beachball",
+            "package": "@azure/msal-browser",
+            "comment": "Bump @azure/msal-common to v14.0.0-beta.2",
+            "commit": "015fd7c397484cdec56161ad02bb08f4c2734a0f"
+          }
+        ],
+        "none": [
+          {
+            "author": "thomas.norling@microsoft.com",
+            "package": "@azure/msal-browser",
+            "commit": "88f49fb55daa60410bbbc126856bdb7d2189817a",
+            "comment": "Replace lerna with npm workspaces #6136"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 06 Jul 2023 00:01:35 GMT",
       "tag": "@azure/msal-browser_v3.0.0-beta.1",
       "version": "3.0.0-beta.1",

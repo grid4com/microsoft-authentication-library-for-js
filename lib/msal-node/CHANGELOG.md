@@ -1,8 +1,17 @@
 # Change Log - @azure/msal-node
 
-This log was last generated on Thu, 06 Jul 2023 00:01:33 GMT and should not be manually modified.
+This log was last generated on Mon, 24 Jul 2023 20:44:45 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 2.0.0-beta.2
+
+Mon, 24 Jul 2023 20:44:45 GMT
+
+### Changes
+
+- ClientCredentials: Fixed bug where user-supplied cache is loaded into memory only after network request #6218 (rginsburg@microsoft.com)
+- Bump @azure/msal-common to v14.0.0-beta.2
 
 ## 2.0.0-beta.1
 

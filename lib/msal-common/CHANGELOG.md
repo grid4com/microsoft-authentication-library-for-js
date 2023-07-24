@@ -1,8 +1,19 @@
 # Change Log - @azure/msal-common
 
-This log was last generated on Thu, 06 Jul 2023 00:01:34 GMT and should not be manually modified.
+This log was last generated on Mon, 24 Jul 2023 20:44:45 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 14.0.0-beta.2
+
+Mon, 24 Jul 2023 20:44:45 GMT
+
+### Changes
+
+- Catch errors thrown by "decodeURIComponent" #6226 (kshabelko@microsoft.com)
+- Prioritize hardcoded metadata over network-sourced metadata #6231 (hemoral@microsoft.com)
+- Update comments to address Policheck rules (thomas.norling@microsoft.com)
+- Added OIDCOptions parameter to config (shylasummers@users.noreply.github.com)
 
 ## 14.0.0-beta.1
 

@@ -1,8 +1,17 @@
 # Change Log - @azure/msal-browser
 
-This log was last generated on Thu, 06 Jul 2023 00:01:35 GMT and should not be manually modified.
+This log was last generated on Mon, 24 Jul 2023 20:44:45 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.0.0-beta.2
+
+Mon, 24 Jul 2023 20:44:45 GMT
+
+### Changes
+
+- Added OIDCOptions parameter to config (shylasummers@users.noreply.github.com)
+- Bump @azure/msal-common to v14.0.0-beta.2
 
 ## 3.0.0-beta.1
 
